@@ -1,52 +1,75 @@
-# Employee Performance Analysis
-The training of the data has been done using the code from https://github.com/AkshayDusad/Employee-Performance-Analysis
-PLease refer the above link if you face issues.
+Employee Performance Analysis
 
-#  Project Summary
+Project Summary
 
-### Requirement           
-   The following insights are expected from this project:
-- Department wise performances.
-- Top 3 Important Factors effecting employee performance.
-- A trained model which can predict the employee performance based on factors as inputs.
-- Streamlit app for visualizing the data and create an interesting UI 
+This project aims to analyze and predict employee performance based on various workplace factors such as department, job role, environment satisfaction, salary hikes, and work-life balance. The goal is to provide insights that can help organizations improve workforce efficiency and employee satisfaction.
 
-### Analysis
-- The data is supervised and categorical. The predictor variables are ordinal and a few among them are nominal. The target variable 'Performance Rating' is ordinal. 
-- To analyze the data, various data processing techniques like Label Encoding and Standardization is used. Correlation Coeffecient is used to interpret the relationship between variables. The most important features selected are Department, Job Role, Environment Satisfaction, Last Salary Hike Percent, Work Life Balance, Experience Years At This Company, Experience Years In Current Role, Years Since Last Promotion, Years With Current Manager. 
-- For training the data and predicting the target, algorithms used are Logistic Regression, Support Vector Machine, Decision Tree, Random Forest, Naive Bayes, K-Nearest Neighbor, XGBoost Classifier and Artificial Neural Network. 
-- A separate analysis of Department wise Performance is carried out.
+Objectives
 
-### Summary
-   The project was done with the purpose of finding out factors which affected the Performance of the employees, training a model which accurately predicts the Performance Rating of the employee, analyzing the data to provide recommendations to improve the performance and gain insights from the analysis.
-   The following steps were carried out:
-1. Import the data provided, find out the predictor & target variables and look for missing values.
-2. Analysis of Department wise performance as asked.
-3. Label Encoding the ordinal columns.
-4. Calculate correlation coeffecient to find out the relationship between variables and then select the important features for analysis.
-5. Standardizing the data and splitting it into test and train.
-6. Training the data using algorithms like Logistic Regression, Support Vector Machine, Decision Tree, Random Forest, Naive Bayes, K-Nearest Neighbor, XGBoost Classifier and Artificial Neural Network and checking the accuracy to find out which algorithm is the best.
-7. Exporting the model with highest accuracy. 
+Identify key factors affecting employee performance.
 
-### Results
--    Random Forest with GridSearchCV gives 93% accuracy. The features that are positively correlated are Environment Satisfaction, Last Salary Hike Percent & Worklife Balance. This means that if these factors increases, Performance Rating will increase. On the other hand, the features that are negatively correlated are Years Since Last Promotion, Experience Years at this Company, Experience years in Current Role & Years with Current Manager. This means that if these factors increases, Performance Rating will go down.
--    The top 3 features effecting employee performances are:
-1. Employee Environment Satisfaction (39.5%)
-2. Employee Last Salary Hike Percent (33.3%)
-3. Years since last promotion (16.7%)
+Develop a machine learning model to predict employee performance ratings.
 
-### Analysis and Insights
--    It was observed that the maximum accuracy was obtained when we used Random Forest with GridSearchCV which was 93%. XGBoost Classifier also yielded an accuracy of 92.8%. 
--    The important features that are positively correlated are Environment Satisfaction, Last Salary Hike Percent & Worklife Balance. This means that if these factors increases, Performance Rating will increase. On the other hand, the features that are negatively correlated are Years Since Last Promotion, Experience Years at this Company, Experience years in current role & Years with Current Manager. This means that if these factors increases, Performance Rating will go down.
--    We can conclude that the company should provide a better environment as it increases the performance drastically. The company should increase the salary of the employee from time to time and help them maintain a worklife balance. On the other hand, shuffling the manager from time to time will also affect performance. 
+Visualize trends in performance across different departments and roles.
 
-### Recommendation
-- From the results, we can conclude that the company should provide a better environment as it increases the performance drastically. The company should increase the salary of the employee from time to time and help them maintain a worklife balance. On the other hand, shuffling the manager from time to time will also affect performance. 
+Create an interactive Streamlit app for real-time analysis and predictions.
 
-### Data app using Streamlit
--  After identifying the algorithm with the best accuracy, this model is used to create an app using streamlit. SLiders and radio buttons are used to select the employee performance. Based on this selection, the performance rating of the employee will be updated.
--  Install  streamlit before running the app using the following command
-##### pip install streamlit
+Approach
 
-### To run the app (run the following command from the root directory) 
-##### streamlit run emp-perf-app.py
+Data Preprocessing: Cleaning and transforming data using Pandas and NumPy.
+
+Feature Engineering: Selecting the most relevant variables impacting performance.
+
+Model Training & Evaluation:
+
+Tried multiple ML algorithms (XGBoost, Random Forest, Logistic Regression).
+
+Tuned hyperparameters to achieve the best accuracy.
+
+Insights Generation:
+
+Used correlation analysis to determine the impact of salary hikes, work-life balance, and promotions.
+
+Identified the top 3 most important factors influencing employee performance.
+
+Deployment:
+
+Built a Streamlit web app where users can input employee details and receive performance predictions.
+
+Included interactive charts and visualizations for better data interpretation.
+
+Key Findings
+
+Work environment satisfaction, salary hikes, and work-life balance are the top contributors to employee performance.
+
+Employees with longer tenure but fewer promotions tend to have lower performance ratings.
+
+The model achieved over 90% accuracy in predicting employee performance.
+
+Technologies Used
+
+Python: Data analysis and machine learning.
+
+SQL (Optional): For structured data storage.
+
+Pandas, NumPy, Seaborn, Matplotlib: Data processing and visualization.
+
+Scikit-Learn, XGBoost: Model training and evaluation.
+
+Streamlit: Interactive dashboard development.
+
+Future Improvements
+
+Expand dataset with real-world employee feedback.
+
+Integrate a recommendation system to suggest improvements for underperforming employees.
+
+Implement deep learning models for more precise predictions.
+
+Conclusion
+
+This project provides valuable insights into employee performance trends and offers a predictive tool for HR professionals. By analyzing workplace factors, companies can implement strategic improvements to enhance productivity and employee satisfaction.
+   
+ 
+
+ 

@@ -5,7 +5,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import *
 
 st.write("""
-# Basic Employee Performance Prediction App
+# SmartPerf - AI-Powered Employee Insights 
 This app predicts the **Employee Performance** based on the various factors!
 """)
 

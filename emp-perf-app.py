@@ -13,7 +13,7 @@ uploaded_file = st.file_uploader("Upload an Excel file", type=["xls", "xlsx"])
 if uploaded_file is not None:
     dataset = pd.read_excel(uploaded_file)
 
-dataset.drop(['EmpNumber'],inplace=True,axis=1)
+dataset.drop(['EmpNumber'],inplace=True,errors='ignore')
 
 # Encoding all the ordinal columns and creating a dummy variable for them to see if there are any effects on Performance Rating
 #le = LabelEncoder()

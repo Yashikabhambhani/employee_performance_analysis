@@ -9,7 +9,9 @@ st.write("""
 This app predicts the **Employee Performance** based on the various factors!
 """)
 
-dataset = pd.read_excel('EmployeePerformanceData.xls')
+uploaded_file = st.file_uploader("Upload an Excel file", type=["xls", "xlsx"])
+if uploaded_file is not None:
+    dataset = pd.read_excel(uploaded_file)
 
 dataset.drop(['EmpNumber'],inplace=True,axis=1)
 
